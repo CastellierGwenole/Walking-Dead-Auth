@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+       
+       <input class="form-control" type="text" name="sethu" id="recup" value="" />
+       <button onclick="recupName()">test</button>
+       
+
+       <div id="listPerso">
+
+       </div>
+       
+       
+       
+       <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-firestore.js"></script>
+        <script>
+            // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyCB6MzFcvub9DLpFfm_9O19X6aEG2IUmm4",
+                authDomain: "walkingdead-9257d.firebaseapp.com",
+                databaseURL: "https://walkingdead-9257d.firebaseio.com",
+                projectId: "walkingdead-9257d",
+                storageBucket: "walkingdead-9257d.appspot.com",
+                messagingSenderId: "997114526098"
+            };
+            firebase.initializeApp(config);
+            var db = firebase.firestore();
+            
+        </script>
+        <script type="text/javascript" src="style.js"></script>
+    </body>
+
+    </html>
