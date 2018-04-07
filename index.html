@@ -1,43 +1,63 @@
 <!DOCTYPE html>
-    <html lang="en">
+<html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Document</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
 
-    <body>
-       
-       <input class="form-control" type="text" name="sethu" id="recup" value="" />
-       <button onclick="recupName()">test</button>
-       
+<body>
 
-       <div id="listPerso">
+    <div id="register">
+    <p id=infosignout>POUR VOIR OU UTILISER LA LISTE MERCI DE VOUS CONNECTER <br> Sing Out <br>  Attention a bien entrer une address mail sous ce format : exemple@test.net et un mot de passe de 8 caractères minimum</p>
 
-       </div>
-       
-       
-       
-       <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-firestore.js"></script>
-        <script>
-            // Initialize Firebase
-            var config = {
-                apiKey: "AIzaSyCB6MzFcvub9DLpFfm_9O19X6aEG2IUmm4",
-                authDomain: "walkingdead-9257d.firebaseapp.com",
-                databaseURL: "https://walkingdead-9257d.firebaseio.com",
-                projectId: "walkingdead-9257d",
-                storageBucket: "walkingdead-9257d.appspot.com",
-                messagingSenderId: "997114526098"
-            };
-            firebase.initializeApp(config);
-            var db = firebase.firestore();
-            
-        </script>
-        <script type="text/javascript" src="style.js"></script>
-    </body>
+    <input class="form-control" type="text" name="sethu" id="addressmailsignout" value="address mail" />
+    <input class="form-control" type="text" name="sethu" id="mdpsignout" value="mot de passe" />
+    <br>
 
-    </html>
+    <button id="btnsignout" onclick="createCompte()">Create</button>
+<br>
+<p>Sign in </p>
+
+    <input class="form-control" type="text" name="sethu" id="addressmailsignin" value="address mail" />
+    <input class="form-control" type="text" name="sethu" id="mdpsignin" value="mot de passe" />
+    <br>
+
+    <button id="btnsignout" onclick="connection()">Connection</button>
+
+</div>
+    <br>
+<div id="modif">
+        <button onclick="partir()">Deconnection</button>
+        <br>
+    <input class="form-control" type="text" name="sethu" id="recup" value="" />
+    <button onclick="recupName()">test</button>
+
+    <div id="listPerso">
+
+    </div>
+
+</div>
+
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-auth.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAg2dmYv8xju512z8wUdsgqUuHJfbVwbx4",
+            authDomain: "walkingdeadauth.firebaseapp.com",
+            databaseURL: "https://walkingdeadauth.firebaseio.com",
+            projectId: "walkingdeadauth",
+            storageBucket: "walkingdeadauth.appspot.com",
+            messagingSenderId: "627690251175"
+        };
+        firebase.initializeApp(config);
+        var db = firebase.firestore();
+    </script>
+    <script type="text/javascript" src="style.js"></script>
+</body>
+
+</html>
